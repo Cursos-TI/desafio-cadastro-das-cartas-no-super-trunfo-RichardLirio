@@ -15,15 +15,19 @@ int main() {
     float area;
     float pib;
     int pontosTuristicos;
+    // população/area
+    // pib/população
+
+    
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     printf("🃏 Bem vindo ao Super Trunfo em C \n");
     printf("Primeiro, vamos cadastrar sua primeira carta.\n");
-    printf("Digite somente uma letra de 'A' a 'H' do estado:");
+    printf("Digite somente uma letra de 'A' a 'H' do estado:\n");
     
-    scanf(" %c", &estado);
+    scanf("%c", &estado);
 
     printf("Certo, agora digite o codigo da carta. ex:(A01, B03):\n");
     
@@ -49,7 +53,6 @@ int main() {
     printf("Por ultimo o número de pontos turisticos:\n");
 
     scanf("%i", &pontosTuristicos);
-
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
@@ -60,12 +63,14 @@ int main() {
     printf("Nome da Cidade: %s\n", nomeCidadade);
     printf("População: %i\n", populacao);
     printf("Área: %.2f km²\n", area);
-    printf("PIB: R$ %.2f\n", pib);
+    printf("PIB: %.2f\n", pib);
     printf("Número de Pontos Turísticos: %i\n", pontosTuristicos);
+    printf("Densidade Populacional: %.2f\n", (float) populacao / area);
+    printf("PIB per Capita: %.2f\n", (float) pib / populacao);
     printf("---------------------------\n");
     
     // Carta 2
-    printf("Digite somente uma letra de 'A' a 'H' do estado:");
+    printf("Digite somente uma letra de 'A' a 'H' do estado:\n");
     
     scanf(" %c", &estado);
 
@@ -104,6 +109,8 @@ int main() {
     printf("Área: %.2f km²\n", area);
     printf("PIB: R$ %.2f\n", pib);
     printf("Número de Pontos Turísticos: %i\n", pontosTuristicos);
+    printf("Densidade Populacional: %.2f\n", (float) populacao / area);
+    printf("PIB per Capita: %.2f\n", (float) pib / populacao);
     printf("---------------------------\n");
 
     return 0;
