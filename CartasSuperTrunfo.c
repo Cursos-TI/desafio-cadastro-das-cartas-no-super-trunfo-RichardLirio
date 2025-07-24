@@ -8,13 +8,23 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    char estado;
-    char cartaCodigo[20];
-    char nomeCidadade[50];
-    int populacao;
-    float area;
-    float pib;
-    int pontosTuristicos;
+    // Variaveis carta 1
+    char estado1;
+    char cartaCodigo1[20];
+    char nomeCidadade1[50];
+    int populacao1;
+    float area1;
+    float pib1;
+    int pontosTuristicos1;
+
+    // Variaveis carta 2
+    char estado2;
+    char cartaCodigo2[20];
+    char nomeCidadade2[50];
+    int populacao2;
+    float area2;
+    float pib2;
+    int pontosTuristicos2;
     // população/area
     // pib/população
 
@@ -27,90 +37,90 @@ int main() {
     printf("Primeiro, vamos cadastrar sua primeira carta.\n");
     printf("Digite somente uma letra de 'A' a 'H' do estado:\n");
     
-    scanf("%c", &estado);
+    scanf("%c", &estado1);
 
     printf("Certo, agora digite o codigo da carta. ex:(A01, B03):\n");
     
-    scanf("%s", &cartaCodigo);
+    scanf("%s", cartaCodigo1);
     getchar(); //Limpa o buffer
     printf("Digite o nome da cidade:\n");
    
-    fgets(nomeCidadade, sizeof(nomeCidadade), stdin); //captura um buffer do tamano da variavel digitada no console
-    nomeCidadade[strcspn(nomeCidadade, "\n")] = 0;
+    fgets(nomeCidadade1, sizeof(nomeCidadade1), stdin); //captura um buffer do tamano da variavel digitada no console
+    nomeCidadade1[strcspn(nomeCidadade1, "\n")] = 0;
 
     printf("Digite a população:\n");
 
-    scanf("%i", &populacao);
+    scanf("%i", &populacao1);
 
     printf("Digite a área em km²:\n");
 
-    scanf("%f", &area);
+    scanf("%f", &area1);
 
     printf("Digite o PIB:\n");
 
-    scanf("%f", &pib);
+    scanf("%f", &pib1);
 
     printf("Por ultimo o número de pontos turisticos:\n");
 
-    scanf("%i", &pontosTuristicos);
+    scanf("%i", &pontosTuristicos1);
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
     printf("---------------------------\n");
     printf("Carta 1:\n");
-    printf("Estado: %c \n", estado);
-    printf("Codigo da carta: %s\n", cartaCodigo);
-    printf("Nome da Cidade: %s\n", nomeCidadade);
-    printf("População: %i\n", populacao);
-    printf("Área: %.2f km²\n", area);
-    printf("PIB: %.2f\n", pib);
-    printf("Número de Pontos Turísticos: %i\n", pontosTuristicos);
-    printf("Densidade Populacional: %.2f\n", (float) populacao / area);
-    printf("PIB per Capita: %.2f\n", (float) pib / populacao);
+    printf("Estado: %c \n", estado1);
+    printf("Codigo da carta: %s\n", cartaCodigo1);
+    printf("Nome da Cidade: %s\n", nomeCidadade1);
+    printf("População: %i\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f\n", pib1);
+    printf("Número de Pontos Turísticos: %i\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f\n", (float) populacao1 / area1);
+    printf("PIB per Capita: %.2f\n", (float) pib1*1e9 / populacao1);
     printf("---------------------------\n");
     
     // Carta 2
     printf("Digite somente uma letra de 'A' a 'H' do estado:\n");
     
-    scanf(" %c", &estado);
+    scanf(" %c", &estado2);
 
     printf("Certo, agora digite o codigo da carta. ex:(A01, B03):\n");
     
-    scanf("%s", &cartaCodigo);
+    scanf("%s", cartaCodigo2);
     getchar(); //Limpa o buffer
     printf("Digite o nome da cidade:\n");
    
-    fgets(nomeCidadade, sizeof(nomeCidadade), stdin); //captura um buffer do tamano da variavel digitada no console
-    nomeCidadade[strcspn(nomeCidadade, "\n")] = 0;
+    fgets(nomeCidadade2, sizeof(nomeCidadade2), stdin); //captura um buffer do tamano da variavel digitada no console
+    nomeCidadade2[strcspn(nomeCidadade2, "\n")] = 0;
 
     printf("Digite a população:\n");
 
-    scanf("%i", &populacao);
+    scanf("%i", &populacao2);
 
     printf("Digite a área em km²:\n");
 
-    scanf("%f", &area);
+    scanf("%f", &area2);
 
     printf("Digite o PIB:\n");
 
-    scanf("%f", &pib);
+    scanf("%f", &pib2);
 
     printf("Por ultimo o número de pontos turisticos:\n");
 
-    scanf("%i", &pontosTuristicos);
+    scanf("%i", &pontosTuristicos2);
 
 
     printf("---------------------------\n");
     printf("Carta 2:\n");
-    printf("Estado: %c \n", estado);
-    printf("Codigo da carta: %s\n", cartaCodigo);
-    printf("Nome da Cidade: %s\n", nomeCidadade);
-    printf("População: %i\n", populacao);
-    printf("Área: %.2f km²\n", area);
-    printf("PIB: R$ %.2f\n", pib);
-    printf("Número de Pontos Turísticos: %i\n", pontosTuristicos);
-    printf("Densidade Populacional: %.2f\n", (float) populacao / area);
-    printf("PIB per Capita: %.2f\n", (float) pib / populacao);
+    printf("Estado: %c \n", estado2);
+    printf("Codigo da carta: %s\n", cartaCodigo2);
+    printf("Nome da Cidade: %s\n", nomeCidadade2);
+    printf("População: %i\n", populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: R$ %.2f\n", pib2);
+    printf("Número de Pontos Turísticos: %i\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f\n", (float) populacao2 / area2);
+    printf("PIB per Capita: %.2f\n", (float) pib2*1e9 / populacao2);
     printf("---------------------------\n");
 
     return 0;
